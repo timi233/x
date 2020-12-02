@@ -3,7 +3,7 @@ import styles from '@/styles/System/WindowManager/Window.module.scss';
 import type { TitleBarProps } from '@/types/components/System/WindowManager/TitleBar';
 
 import Icon from '@/components/System/Icon';
-import { faMinus, faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faMinus, faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const TitleBar: React.FC<TitleBarProps> = ({
@@ -35,8 +35,12 @@ const TitleBar: React.FC<TitleBarProps> = ({
         </nav>
       </header>
       <nav className={`${styles.toolbar} handle`}>
-        <button type="button">&lt;</button>
-        <button type="button" className={styles.enabled}>&gt;</button>
+        <button type="button">
+          <FontAwesomeIcon size="xs" icon={faChevronLeft} />
+        </button>
+        <button type="button" className={styles.enabled}>
+          <FontAwesomeIcon size="xs" icon={faChevronRight} />
+        </button>
       </nav>
     </div>
   );

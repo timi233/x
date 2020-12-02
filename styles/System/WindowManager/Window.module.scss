@@ -204,6 +204,9 @@ $buttonIconOpacity: 0.975;
         border: 0;
         border-radius: 5px;
         font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         
         &:not(:first-child) {
           margin-left: 1px;
