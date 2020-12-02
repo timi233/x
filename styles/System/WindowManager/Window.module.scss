@@ -57,131 +57,161 @@ $buttonIconOpacity: 0.975;
   }
 
   .titlebar {
-    display: flex;
-    align-items: center;
-
-    height: map-get($window, title-bar-height);
-
-    color: map-get($window, title-bar-text-color);
-    border-radius: map-get($window, border-radius)
-      map-get($window, border-radius) 0 0;
     background: linear-gradient(0deg, rgb(54, 54, 54), rgb(65, 65, 65));
+    border-radius: map-get($window, border-radius)
+    map-get($window, border-radius) 0 0;
 
-    h1 {
-      width: 100%;
-
-      figure {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
+    header {
+      display: flex;
+      align-items: center;
+  
+      height: map-get($window, title-bar-height);
+  
+      color: map-get($window, title-bar-text-color);
+      border-radius: map-get($window, border-radius)
+        map-get($window, border-radius) 0 0;
+  
+      h1 {
         width: 100%;
-        height: map-get($window, title-bar-height);
-
-        img {
+  
+        figure {
           display: flex;
-
-          width: 16px;
-          height: 16px;
-          margin-right: 4px;
-        }
-
-        figcaption {
-          font-size: map-get($window, title-bar-font-size);
-          font-weight: 400;
-
-          overflow: hidden;
-
-          max-width: 45%;
-
-          text-align: center;
-          white-space: nowrap;
-          text-overflow: ellipsis;
+          align-items: center;
+          justify-content: center;
+  
+          width: 100%;
+          height: map-get($window, title-bar-height);
+  
+          img {
+            display: flex;
+  
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+          }
+  
+          figcaption {
+            font-size: map-get($window, title-bar-font-size);
+            font-weight: 400;
+  
+            overflow: hidden;
+  
+            max-width: 45%;
+  
+            text-align: center;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
         }
       }
-    }
-
-    nav {
-      position: absolute;
-      left: 0;
-
-      display: flex;
-
-      margin-left: 8px;
-
-      button {
-        font-size: 8px;
-
+  
+      nav {
+        position: absolute;
+        left: 0;
+  
         display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 12px;
-        height: 12px;
-        margin-right: 8px;
-
-        color: rgb(95, 95, 95);
-        border: 0;
-        border-radius: 100%;
-        background-color: rgb(95, 95, 95);
-
-        &:before {
+  
+        margin-left: 8px;
+  
+        button {
+          font-size: 8px;
+  
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          width: 12px;
+          height: 12px;
+          margin-right: 8px;
+  
+          color: rgb(95, 95, 95);
+          border: 0;
+          border-radius: 100%;
+          background-color: rgb(95, 95, 95);
+  
+          &:before {
+            position: absolute;
+  
+            width: 18px;
+            height: 18px;
+  
+            content: '';
+          }
+  
+          &:last-child {
+            margin-right: unset;
+          }
+        }
+      }
+  
+      nav:hover button {
+        font-size: 11px;
+  
+        &#minimize {
+          color: $minimize_text;
+          background-color: $minimize;
+  
+          &:active {
+            background-color: $minimize_active;
+          }
+        }
+  
+        &#maximize {
+          color: $maximize_text;
+          background-color: $maximize;
+  
+          &:active {
+            background-color: $maximize_active;
+          }
+        }
+  
+        &#close {
+          color: $close_text;
+          background-color: $close;
+  
+          &:active {
+            background-color: $close_active;
+          }
+        }
+      }
+  
+      @media (pointer: coarse) {
+        &:after {
           position: absolute;
-
-          width: 18px;
-          height: 18px;
-
+          top: -(map-get($window, title-bar-pointer-padding) / 2);
+          right: 0;
+  
+          width: calc(100% - 68px);
+          height: map-get($window, title-bar-height) +
+            map-get($window, title-bar-pointer-padding);
+  
           content: '';
         }
-
-        &:last-child {
-          margin-right: unset;
-        }
       }
     }
+  
+    .toolbar {
+      height: 32px;
+      display: flex;
+      padding-top: 3px;
+      padding-left: 7px;
 
-    nav:hover button {
-      font-size: 11px;
-
-      &#minimize {
-        color: $minimize_text;
-        background-color: $minimize;
-
-        &:active {
-          background-color: $minimize_active;
+      button {
+        height: 22px;
+        width: 25px;
+        background-color: rgb(85, 85, 85);
+        color: rgb(135, 135, 135);
+        border: 0;
+        border-radius: 5px;
+        font-size: 18px;
+        
+        &:not(:first-child) {
+          margin-left: 1px;
         }
-      }
 
-      &#maximize {
-        color: $maximize_text;
-        background-color: $maximize;
-
-        &:active {
-          background-color: $maximize_active;
+        &.enabled {
+          color: rgb(233, 233, 233);
         }
-      }
-
-      &#close {
-        color: $close_text;
-        background-color: $close;
-
-        &:active {
-          background-color: $close_active;
-        }
-      }
-    }
-
-    @media (pointer: coarse) {
-      &:after {
-        position: absolute;
-        top: -(map-get($window, title-bar-pointer-padding) / 2);
-        right: 0;
-
-        width: calc(100% - 68px);
-        height: map-get($window, title-bar-height) +
-          map-get($window, title-bar-pointer-padding);
-
-        content: '';
       }
     }
   }
