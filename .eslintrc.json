@@ -4,10 +4,7 @@
     "es2021": true,
     "node": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb"],
   "globals": {
     "React": "readonly"
   },
@@ -20,11 +17,7 @@
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
   "rules": {
     "comma-dangle": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
