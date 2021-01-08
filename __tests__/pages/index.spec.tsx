@@ -3,7 +3,7 @@ import Index from 'pages/index';
 
 test('renders index page', () => {
   const { getByText } = render(<Index />);
-  const helloWorldElement = getByText("Hello, world!");
+  const helloWorldElement = getByText('Hello, world!');
 
   expect(helloWorldElement).toBeInTheDocument();
 });
