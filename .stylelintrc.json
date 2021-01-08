@@ -1,6 +1,7 @@
 {
   "extends": [
     "stylelint-config-prettier",
+    "stylelint-config-sass-guidelines",
     "stylelint-config-standard"
   ]
 }
