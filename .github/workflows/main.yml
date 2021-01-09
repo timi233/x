@@ -3,9 +3,9 @@ name: Unit Tests
 on:
   push:
     branches:
-      - master
+      - redo-ep2
   pull_request:
-    branches: [master]
+    branches: [redo-ep2]
 
 jobs:
   Jest:
