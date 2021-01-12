@@ -1,33 +1,19 @@
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
+import Metadata from 'components/pages/Metadata';
+import StyledApp from 'components/pages/StyledApp';
+import type {
+  AppInitialProps,
+  AppPropsType
+} from 'next/dist/next-server/lib/utils';
 import { description, name } from 'package.json';
-import type { ReactElement } from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import defaultTheme from 'themes/default.json';
+import type { FC } from 'react';
 
-const GlobalStyle = createGlobalStyle`
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
+const App: FC<AppInitialProps & AppPropsType> = ({ Component, pageProps }) => (
+  <>
+    <Metadata title={name} description={description} />
+    <StyledApp>
+      <Component {...pageProps} />
+    </StyledApp>
+  </>
+);
 
-  * {
-    box-sizing: border-box;
-  }
-`;
-
-export default function App({ Component, pageProps }: AppProps): ReactElement {
-  return (
-    <>
-      <Head>
-        <title>{name}</title>
-        <meta name="description" content={description} />
-      </Head>
-      <GlobalStyle />
-      <ThemeProvider theme={defaultTheme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
-  );
-}
+export default App;
