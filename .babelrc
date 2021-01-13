@@ -1,7 +1,4 @@
 {
   "presets": ["next/babel"],
-  "plugins": [
-    ["styled-components", { "pure": true, "ssr": true }],
-    "transform-dynamic-import"
-  ]
+  "plugins": [["styled-components", { "pure": true, "ssr": true }]]
 }
