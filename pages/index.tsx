@@ -1,6 +1,6 @@
+import HelloWorld from 'components/generic/HelloWorld';
 import type { FC } from 'react';
-import Title from 'styles/components/general/Title';
 
-const Index: FC = () => <Title>Hello, world!</Title>;
+const Index: FC = () => <HelloWorld />;
 
 export default Index;
