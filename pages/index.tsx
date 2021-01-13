@@ -1,12 +1,6 @@
-import type { ReactElement } from 'react';
-import styled from 'styled-components';
+import type { FC } from 'react';
+import Title from 'styles/components/general/Title';
 
-const Title = styled.h1`
-  color: ${({ theme }) => theme.colors.primary};
-  font-size: 50px;
-  text-align: center;
-`;
+const Index: FC = () => <Title>Hello, world!</Title>;
 
-export default function Home(): ReactElement {
-  return <Title>Hello, world!</Title>;
-}
+export default Index;
