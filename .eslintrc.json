@@ -7,11 +7,16 @@
   },
   "extends": [
     "airbnb",
+    "airbnb/hooks",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
     "plugin:jest/recommended",
     "plugin:react/recommended",
-    "prettier"
+    "plugin:react-hooks/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
   ],
   "globals": {
     "React": "readonly"
