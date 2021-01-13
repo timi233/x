@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { createContext, useContext, useState } from 'react';
-import type { ProgramContextState, Programs } from 'types/programs';
+import type { ProgramContextState, Programs } from 'types/contexts/programs';
 import { STARTUP_PROGRAMS } from 'utils/programDirectory';
 
 const ProgramContext = createContext<ProgramContextState>({ running: {} });
