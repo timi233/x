@@ -1,4 +1,7 @@
 {
   "presets": ["next/babel"],
-  "plugins": [["styled-components", { "pure": true, "ssr": true }]]
+  "plugins": [
+    ["styled-components", { "pure": true, "ssr": true }],
+    "babel-plugin-dynamic-import-node"
+  ]
 }
