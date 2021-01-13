@@ -8,7 +8,6 @@ test('renders index page', async () => {
       <Index />
     </StyledApp>
   );
-  const helloWorldElement = await waitFor(() => getByText('Hello, world!'));
 
-  expect(helloWorldElement).toBeInTheDocument();
+  await waitFor(() => expect(getByText('Hello, world!')).toBeInTheDocument());
 });
