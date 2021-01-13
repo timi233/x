@@ -1,0 +1,7 @@
+{
+  "extends": ["dtslint/dtslint.json", "tslint:recommended"],
+  "rules": {
+    "interface-over-type-literal": false,
+    "quotemark": [true, "single"]
+  }
+}
