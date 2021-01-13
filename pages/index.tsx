@@ -1,6 +1,6 @@
-import Title from 'components/generic/title';
+import { ProgramProvider } from 'contexts/programs';
 import type { FC } from 'react';
 
-const Index: FC = () => <Title>Hello, world!</Title>;
+const Index: FC = () => <ProgramProvider />;
 
 export default Index;
