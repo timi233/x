@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'styles/GlobalStyle';
 import themes from 'styles/themes.json';
-import { StyledAppProps } from 'types/components/pages/StyledApp';
+import type { StyledAppProps } from 'types/components/pages/StyledApp';
 
 const StyledApp: FC<StyledAppProps> = ({
   children,
