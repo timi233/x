@@ -1,4 +1,4 @@
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import StyledApp from 'components/pages/StyledApp';
 import Index from 'pages/index';
 
@@ -9,5 +9,5 @@ test('renders index page', async () => {
     </StyledApp>
   );
 
-  await waitFor(() => expect(getByText('Hello, world!')).toBeInTheDocument());
+  expect(getByText('Hello, world!')).toBeInTheDocument();
 });
