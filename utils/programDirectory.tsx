@@ -5,4 +5,6 @@ export const ALL_PROGRAMS: Programs = {
   helloWorld: dynamic(() => import('components/generic/HelloWorld'))
 };
 
-export const STARTUP_PROGRAMS = ALL_PROGRAMS;
+export const STARTUP_PROGRAMS = {
+  helloWorld: ALL_PROGRAMS.helloWorld
+};
