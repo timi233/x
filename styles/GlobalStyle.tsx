@@ -4,6 +4,8 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     margin: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
     padding: 0;
   }
 
