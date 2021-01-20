@@ -5,6 +5,10 @@ const processDirectory: Processes = {
   HelloWorld: {
     Component: dynamic(import('components/apps/HelloWorld')),
     hasWindow: true
+  },
+  Wallpaper: {
+    Component: dynamic(import('styles/system/Wallpaper')),
+    hasWindow: false
   }
 };
 
