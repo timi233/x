@@ -1,4 +1,4 @@
-export const initialProccessContextState = {
+export const initialProcessContextState = {
   processes: {}
 };
 
