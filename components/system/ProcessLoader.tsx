@@ -1,8 +1,7 @@
 import RenderProcess from 'components/system/RenderProcess';
 import { ProcessConsumer } from 'contexts/process';
-import type { FC } from 'react';
 
-const ProcessLoader: FC = () => (
+const ProcessLoader: React.FC = () => (
   <ProcessConsumer>
     {({ processes }) =>
       Object.entries(processes).map(([id, process]) => (
