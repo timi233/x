@@ -1,18 +1,16 @@
 import 'styled-components';
 
+import type { WallpaperEffect, WallpaperSettings } from 'types/utils/Wallpaper';
+
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       primary: string;
       window: string;
     };
-    wallpaperSettings: {
-      mouseControls: boolean;
-      touchControls: boolean;
-      gyroControls: boolean;
-      scale: number;
-      scaleMobile: number;
-      color: number;
+    wallpaper: {
+      render: WallpaperEffect;
+      settings: WallpaperSettings;
     };
   }
 }

@@ -1,4 +1,5 @@
 import type { DefaultTheme } from 'styled-components';
+import vantaWaves from 'utils/vantaWaves';
 
 const themes: { [key: string]: DefaultTheme } = {
   default: {
@@ -6,13 +7,14 @@ const themes: { [key: string]: DefaultTheme } = {
       primary: '#000',
       window: '#808080'
     },
-    wallpaperSettings: {
-      mouseControls: false,
-      touchControls: false,
-      gyroControls: false,
-      scale: 0.5,
-      scaleMobile: 0.5,
-      color: 0x5588
+    wallpaper: {
+      render: vantaWaves,
+      settings: {
+        color: 0x5588,
+        gyroControls: false,
+        mouseControls: false,
+        touchControls: false
+      }
     }
   }
 };
