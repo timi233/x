@@ -6,5 +6,13 @@ declare module 'styled-components' {
       primary: string;
       window: string;
     };
+    wallpaperSettings: {
+      mouseControls: boolean;
+      touchControls: boolean;
+      gyroControls: boolean;
+      scale: number;
+      scaleMobile: number;
+      color: number;
+    };
   }
 }
