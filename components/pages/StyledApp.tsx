@@ -7,8 +7,10 @@ const StyledApp: React.FC = ({ children }) => (
   <>
     <GlobalStyle />
     <SessionConsumer>
-      {({ theme = themes.default }) => (
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      {({ theme: { id } }) => (
+        <ThemeProvider theme={themes[id] || themes.default}>
+          {children}
+        </ThemeProvider>
       )}
     </SessionConsumer>
   </>

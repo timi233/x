@@ -1,5 +1,8 @@
-import type { DefaultTheme } from 'styled-components';
+import type { Dispatch, SetStateAction } from 'react';
 
 export type SessionContextState = {
-  theme?: DefaultTheme;
+  theme: {
+    id: string;
+    set: Dispatch<SetStateAction<string>>;
+  };
 };
