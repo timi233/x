@@ -4,16 +4,14 @@ import GlobalStyle from 'styles/GlobalStyle';
 import themes from 'styles/themes';
 
 const StyledApp: React.FC = ({ children }) => (
-  <>
-    <GlobalStyle />
-    <SessionConsumer>
-      {({ theme: { id } }) => (
-        <ThemeProvider theme={themes[id] || themes.default}>
-          {children}
-        </ThemeProvider>
-      )}
-    </SessionConsumer>
-  </>
+  <SessionConsumer>
+    {({ theme: { id } }) => (
+      <ThemeProvider theme={themes[id] || themes.default}>
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    )}
+  </SessionConsumer>
 );
 
 export default StyledApp;
