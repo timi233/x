@@ -6,7 +6,7 @@ import themes from 'styles/themes';
 const StyledApp: React.FC = ({ children }) => (
   <SessionConsumer>
     {({ themeName }) => (
-      <ThemeProvider theme={themes[themeName] || themes.default}>
+      <ThemeProvider theme={themes[themeName] || themes.defaultTheme}>
         <GlobalStyle />
         {children}
       </ThemeProvider>

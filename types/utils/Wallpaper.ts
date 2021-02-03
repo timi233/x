@@ -1,15 +1,14 @@
-export type VantaSettings = {
+type VantaWavesSettings = {
   color?: number;
-  gyroControls?: boolean;
-  mouseControls?: boolean;
-  touchControls?: boolean;
+  shininess?: number;
+  waveHeight?: number;
+  waveSpeed?: number;
+  zoom?: number;
 };
 
-export type WallpaperCleanup = () => void;
-
-export type WallpaperSettings = VantaSettings;
+export type WallpaperSettings = VantaWavesSettings;
 
 export type WallpaperEffect = (
   elementRef: React.RefObject<HTMLElement>,
-  settings: WallpaperSettings
-) => WallpaperCleanup;
+  settings?: WallpaperSettings
+) => () => void;
