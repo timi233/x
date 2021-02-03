@@ -11,14 +11,14 @@ const disableMotionControls = {
 };
 
 const vantaWaves: WallpaperEffect = (elementRef, settings = {}) => {
-  const vantaEffect =
-    isWebGLAvailable &&
-    WAVES({
-      el: elementRef.current,
-      THREE, // UPGRADE: @ r124 until Vanta.js uses THREE.BufferGeometry
-      ...disableMotionControls,
-      ...settings
-    });
+  const vantaEffect = isWebGLAvailable
+    ? WAVES({
+        el: elementRef.current,
+        THREE, // UPGRADE: @ r124 until Vanta.js uses THREE.BufferGeometry
+        ...disableMotionControls,
+        ...settings
+      })
+    : null;
 
   return () => {
     vantaEffect?.destroy?.();
