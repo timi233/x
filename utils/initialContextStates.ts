@@ -3,8 +3,6 @@ export const initialProcessContextState = {
 };
 
 export const initialSessionContextState = {
-  theme: {
-    id: '',
-    set: (): void => undefined
-  }
+  themeName: '',
+  setThemeName: (): void => undefined
 };

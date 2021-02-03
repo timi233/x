@@ -2,14 +2,9 @@ import { useState } from 'react';
 import type { SessionContextState } from 'types/contexts/session';
 
 const useSessionContextState = (): SessionContextState => {
-  const [theme, setTheme] = useState('');
+  const [themeName, setThemeName] = useState('');
 
-  return {
-    theme: {
-      id: theme,
-      set: setTheme
-    }
-  };
+  return { themeName, setThemeName };
 };
 
 export default useSessionContextState;
