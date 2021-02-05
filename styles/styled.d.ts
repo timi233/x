@@ -1,6 +1,6 @@
 import 'styled-components';
 
-import type { WallpaperEffect, WallpaperSettings } from 'types/utils/Wallpaper';
+import type { WallpaperEffect } from 'types/utils/Wallpaper';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -8,9 +8,6 @@ declare module 'styled-components' {
       primary: string;
       window: string;
     };
-    wallpaper: {
-      render: WallpaperEffect;
-      settings: WallpaperSettings;
-    };
+    wallpaper: WallpaperEffect;
   }
 }

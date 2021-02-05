@@ -2,11 +2,9 @@ import { useContext, useEffect } from 'react';
 import { ThemeContext } from 'styled-components';
 
 const useWallpaper = (desktopRef: React.RefObject<HTMLElement>): void => {
-  const {
-    wallpaper: { render, settings }
-  } = useContext(ThemeContext);
+  const { wallpaper } = useContext(ThemeContext);
 
-  useEffect(() => render(desktopRef, settings), [desktopRef, render, settings]);
+  useEffect(() => wallpaper(desktopRef), [desktopRef, wallpaper]);
 };
 
 export default useWallpaper;

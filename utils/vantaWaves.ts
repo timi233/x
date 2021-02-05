@@ -1,5 +1,8 @@
 import * as THREE from 'three';
-import type { WallpaperEffect } from 'types/utils/Wallpaper';
+import type {
+  VantaWavesSettings,
+  WallpaperEffect
+} from 'types/utils/Wallpaper';
 /* @ts-expect-error No declaration file required */
 import WAVES from 'vanta/dist/vanta.waves.min';
 
@@ -10,7 +13,9 @@ const disableMotionControls = {
   touchControls: false
 };
 
-const vantaWaves: WallpaperEffect = (elementRef, settings = {}) => {
+const vantaWaves = (
+  settings: Partial<VantaWavesSettings> = {}
+): WallpaperEffect => (elementRef) => {
   const vantaEffect = isWebGLAvailable
     ? WAVES({
         el: elementRef.current,
