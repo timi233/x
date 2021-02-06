@@ -5,4 +5,7 @@ export const initialProcessContextState: ProcessContextState = {
   processes: {}
 };
 
-export const initialSessionContextState: SessionContextState = {};
+export const initialSessionContextState: SessionContextState = {
+  themeName: '',
+  setThemeName: () => ''
+};
