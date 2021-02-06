@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import type { MetadataProps } from 'types/components/pages/Metadata';
+import { description, name } from 'package.json';
 
-const Metadata: React.FC<MetadataProps> = ({ description, title }) => (
+const Metadata: React.FC = () => (
   <Head>
     <meta name="description" content={description} />
-    <title>{title}</title>
+    <title>{name}</title>
   </Head>
 );
 

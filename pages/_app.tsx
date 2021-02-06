@@ -2,8 +2,6 @@ import Metadata from 'components/pages/Metadata';
 import StyledApp from 'components/pages/StyledApp';
 import { SessionProvider } from 'contexts/session';
 import type { AppProps } from 'next/app';
-import { description, name } from 'package.json';
-import themes from 'styles/themes.json';
 
 export default function App({
   Component,
@@ -11,9 +9,9 @@ export default function App({
 }: AppProps): React.ReactElement {
   return (
     <>
-      <Metadata description={description} title={name} />
+      <Metadata />
       <SessionProvider>
-        <StyledApp currentTheme={themes.default}>
+        <StyledApp>
           <Component {...pageProps} />
         </StyledApp>
       </SessionProvider>
