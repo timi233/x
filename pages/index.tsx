@@ -1,4 +1,4 @@
-import ProcessLoader from 'components/system/ProcessLoader';
+import ProcessLoader from 'components/system/Process/ProcessLoader';
 import { ProcessProvider } from 'contexts/process';
 
 export default function Home(): React.ReactElement {

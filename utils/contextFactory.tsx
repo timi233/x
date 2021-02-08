@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import type { ContextFactory } from 'types/contexts/contextFactory';
+import type { ContextFactory } from 'types/utils/contextFactory';
 
 const contextFactory: ContextFactory = (
   initialContextState,

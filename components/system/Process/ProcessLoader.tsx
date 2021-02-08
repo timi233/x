@@ -1,4 +1,4 @@
-import RenderProcess from 'components/system/RenderProcess';
+import RenderProcess from 'components/system/Process/RenderProcess';
 import { ProcessConsumer } from 'contexts/process';
 
 const ProcessLoader: React.FC = () => (

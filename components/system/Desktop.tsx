@@ -1,4 +1,4 @@
-import Taskbar from 'components/system/Taskbar';
+import Taskbar from 'components/system/Taskbar/Taskbar';
 import { ThemeConsumer } from 'styled-components';
 import StyledDesktop from 'styles/components/system/StyledDesktop';
 
