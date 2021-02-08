@@ -1,13 +1,15 @@
-import useWallpaper from 'hooks/useWallpaper';
-import { useRef } from 'react';
+import Taskbar from 'components/system/Taskbar';
+import { ThemeConsumer } from 'styled-components';
 import StyledDesktop from 'styles/components/system/StyledDesktop';
 
-const Desktop: React.FC = ({ children }) => {
-  const desktopRef = useRef<HTMLElement>(null);
-
-  useWallpaper(desktopRef);
-
-  return <StyledDesktop ref={desktopRef}>{children}</StyledDesktop>;
-};
+const Desktop: React.FC = () => (
+  <ThemeConsumer>
+    {({ wallpaper }) => (
+      <StyledDesktop ref={(desktopRef) => wallpaper?.(desktopRef)}>
+        <Taskbar />
+      </StyledDesktop>
+    )}
+  </ThemeConsumer>
+);
 
 export default Desktop;

@@ -1,16 +1,16 @@
-import Taskbar from 'components/system/Taskbar';
+import Desktop from 'components/system/Desktop';
 import dynamic from 'next/dynamic';
 import type { Processes } from 'types/contexts/process';
 
-const STARTUP_PROCESSES: string[] = ['HelloWorld', 'Taskbar'];
+const STARTUP_PROCESSES: string[] = ['HelloWorld', 'Desktop'];
 
 export const processDirectory: Processes = {
+  Desktop: {
+    Component: Desktop
+  },
   HelloWorld: {
     Component: dynamic(() => import('components/apps/HelloWorld')),
     hasWindow: true
-  },
-  Taskbar: {
-    Component: Taskbar
   }
 };
 
