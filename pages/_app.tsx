@@ -8,13 +8,11 @@ export default function App({
   pageProps
 }: AppProps): React.ReactElement {
   return (
-    <>
+    <SessionProvider>
       <Metadata />
-      <SessionProvider>
-        <StyledApp>
-          <Component {...pageProps} />
-        </StyledApp>
-      </SessionProvider>
-    </>
+      <StyledApp>
+        <Component {...pageProps} />
+      </StyledApp>
+    </SessionProvider>
   );
 }
