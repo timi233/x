@@ -14,7 +14,7 @@ const disableControls = {
 };
 
 const vantaWaves = (settings: VantaWavesSettings): WallpaperEffect => (
-  desktopRef: HTMLElement
+  desktopRef
 ) => {
   const vantaEffect =
     desktopRef && isWebGLAvailable
