@@ -11,13 +11,3 @@ test('renders main element', () => {
 
   expect(getByRole('main')).toBeInTheDocument();
 });
-
-test('renders nav element', () => {
-  const { getByRole } = render(
-    <StyledApp>
-      <Index />
-    </StyledApp>
-  );
-
-  expect(getByRole('navigation')).toBeInTheDocument();
-});
