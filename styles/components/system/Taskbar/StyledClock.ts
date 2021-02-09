@@ -2,10 +2,14 @@ import styled from 'styled-components';
 
 const StyledStartButton = styled.time`
   background-color: green;
+  display: flex;
+  font-size: ${({ theme }) => theme.fonts.clock.size};
   height: 100%;
+  place-content: center;
+  place-items: center;
   position: absolute;
   right: 0;
-  width: 90px;
+  width: ${({ theme }) => theme.sizes.clock.width};
 `;
 
 export default StyledStartButton;
