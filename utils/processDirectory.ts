@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
-export const Desktop = {
-  Component: dynamic(() => import('components/system/Desktop'))
+export const Taskbar = {
+  Component: dynamic(() => import('components/system/Taskbar/Taskbar'))
 };
 
 export const HelloWorld = {
