@@ -18,12 +18,7 @@ const withServerStyleSheet = async (
 
     return {
       ...initialProps,
-      styles: (
-        <>
-          {styles}
-          {sheet.getStyleElement()}
-        </>
-      )
+      styles: [styles, sheet.getStyleElement()]
     };
   } finally {
     sheet.seal();
