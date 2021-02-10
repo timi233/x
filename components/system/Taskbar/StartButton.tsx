@@ -1,5 +1,5 @@
 import StyledStartButton from 'styles/components/system/Taskbar/StyledStartButton';
 
-const StartButton: React.FC = () => <StyledStartButton>X</StyledStartButton>;
+const StartButton = (): JSX.Element => <StyledStartButton>X</StyledStartButton>;
 
 export default StartButton;
