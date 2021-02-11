@@ -5,9 +5,9 @@ const StyledTaskbarEntry = styled.li`
   border-bottom: ${({ theme }) => theme.sizes.taskbarEntry.border.bottom};
   display: flex;
   height: 100%;
+  max-width: ${({ theme }) => theme.sizes.taskbarEntry.width};
   padding: ${({ theme }) => theme.sizes.taskbarEntry.padding};
   place-items: center;
-  width: ${({ theme }) => theme.sizes.taskbarEntry.width};
 `;
 
 export default StyledTaskbarEntry;
