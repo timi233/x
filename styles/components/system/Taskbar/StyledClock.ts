@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledStartButton = styled.time`
+const StyledClock = styled.time`
   background-color: green;
   display: flex;
   font-size: ${({ theme }) => theme.fonts.clock.size};
@@ -12,4 +12,4 @@ const StyledStartButton = styled.time`
   width: ${({ theme }) => theme.sizes.clock.width};
 `;
 
-export default StyledStartButton;
+export default StyledClock;
