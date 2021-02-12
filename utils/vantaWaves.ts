@@ -24,7 +24,7 @@ const vantaWaves = (settings: VantaWavesSettings): WallpaperEffect => (
           ...disableControls,
           ...settings
         })
-      : null;
+      : undefined;
 
   return () => {
     vantaEffect?.destroy?.();
