@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledStartButton = styled.button`
-  background-color: red;
+  background-color: unset;
   color: ${({ theme }) => theme.sizes.startButton.icon.color};
   display: flex;
   font-size: ${({ theme }) => theme.sizes.startButton.icon.size};

@@ -6,6 +6,7 @@
     "stylelint-config-styled-components"
   ],
   "rules": {
+    "function-whitespace-after": null,
     "value-keyword-case": null
   }
 }
