@@ -17,6 +17,10 @@ const sizes = {
     width: '76px'
   },
   startButton: {
+    icon: {
+      color: '#FFF',
+      size: '19px'
+    },
     width: '36px'
   },
   taskbar: {

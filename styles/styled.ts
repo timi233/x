@@ -19,6 +19,10 @@ declare module 'styled-components' {
         width: string;
       };
       startButton: {
+        icon: {
+          color: string;
+          size: string;
+        };
         width: string;
       };
       taskbar: {
